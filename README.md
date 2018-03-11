@@ -4,7 +4,7 @@
 
 This is simple zend-framework based API wrapper.
 
-##TODO:
+## TODO:
 
 - clone it to your server
 - rename config/autoload/local.php.dist to config/autoload/local.php
