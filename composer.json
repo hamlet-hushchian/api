@@ -1,0 +1,33 @@
+{
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "zendframework/zend-mvc": "^3.1",
+        "zfcampus/zf-development-mode": "^3.1",
+        "zendframework/zend-json": "^3.1",
+        "doctrine/doctrine-orm-module": "^1.1",
+        "doctrine/migrations": "^1.5",
+        "zendframework/zend-test": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Api\\": "module/Api/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApiTest\\": "module/Api/test/"
+        }
+    },
+    "scripts": {
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "development-disable": "zf-development-mode disable",
+        "development-enable": "zf-development-mode enable",
+        "development-status": "zf-development-mode status",
+        "post-create-project-cmd": [
+            "@development-enable"
+        ],
+        "serve": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "test": "phpunit"
+    }
+}
