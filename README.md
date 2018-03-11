@@ -8,6 +8,7 @@ This is simple zend-framework based API wrapper.
 
 - clone it to your server
 - rename config/autoload/local.php.dist to config/autoload/local.php
+- add your database credentials
 - update dependencies using composer 
 
 ```bash
