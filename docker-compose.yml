@@ -1,0 +1,20 @@
+version: '3'
+services:
+  php:
+    image: hamlet/php:7.2-fpm
+    volumes:
+      - ./:/var/www/html
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 80:80
+  postgres:
+    image: postgres:11.0
+    volumes:
+      - ./docker/data/pgsql:/var/lib/postgresql/data/pgdata:Z
+    ports:
+      - 5432:5432
+    environment:
+      PGDATA: /var/lib/postgresql/data/pgdata

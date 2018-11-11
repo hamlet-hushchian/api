@@ -32,7 +32,7 @@ class Version20180311181914 extends AbstractMigration
     {
         //Insert default content to table authors
         $sql = "INSERT INTO authors
-          (`name`)
+          (name)
           VALUES
           ('George Orwell'),
           ('Mark Twain'),
@@ -43,11 +43,11 @@ class Version20180311181914 extends AbstractMigration
 
         //Insert default content to table books
         $sql = "INSERT INTO books
-          (`author_id`, `title`)
+          (author_id, title)
           VALUES
           (1,'Down and Out in Paris and London'),
           (1,'Burmese Days'),
-          (1,'A Clergyman`s Daughter'),
+          (1,'A Clergymans Daughter'),
           (1,'Keep the Aspidistra Flying'),
           (1,'The Road to Wigan Pier'),
           (2,'Roughing It'),
